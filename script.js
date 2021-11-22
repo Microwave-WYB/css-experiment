@@ -1,6 +1,8 @@
+
 let cursor = document.getElementById("cursor");
 let frame = document.querySelector(".floating-card-frame");
 let card = document.querySelector(".floating-card");
+
 
 document.body.addEventListener("mousemove", function (e) {
   (cursor.style.left = e.clientX + "px"), (cursor.style.top = e.clientY + "px");
@@ -30,12 +32,13 @@ $(".floating-card-frame").mousemove(function (e) {
   card.style.transform = `translate(${xTranslatePercent-50}%, ${yTranslatePercent-50}%) scale(1.05)`;
   card.style.boxShadow = `${xShadowTranslate}px ${yShadowTranslate}px 20px rgba(0, 0, 0, 0.4), ${xShadowTranslate}px ${yShadowTranslate}px 16px rgba(43, 142, 255, 0.4)`;
 
-  let brightness = 1 + 0.3 * (1 - Math.sqrt(Math.pow(xRelCenter, 2) + Math.pow(yRelCenter, 2)));
+  let brightness = 1 + 0.5 * (1 - Math.sqrt(Math.pow(xRelCenter, 2) + Math.pow(yRelCenter, 2)));
   card.style.filter = `brightness(${brightness})`;
+  card.style.backdropFilter = `blur(10px)`;
 });
 
 $(".floating-card-frame").mouseleave(function () {
   card.style.transform = "translate(-50%, -50%)";
   card.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.5)";
-  card.style.filter = "brightness(1)";
+  card.style.filter = "brightness(1) backdrop-blur(10px)";
 });

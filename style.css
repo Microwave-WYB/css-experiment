@@ -1,6 +1,17 @@
 body {
     background-color: rgb(255, 255, 255);
     cursor: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    object-fit: cover;
 }
 
 .canvas {
@@ -24,13 +35,14 @@ body {
 }
 
 .floating-card {
+    backdrop-filter: blur(10px);
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 300px;
     width: 300px;
-    background: rgb(80, 170, 255);
+    background: rgba(80, 170, 255, 0.7);
     border-radius: 50px;
     transition: all 0.3s ease-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -43,8 +55,7 @@ body {
     pointer-events: none;
     left: -100px;
     top: 50%;
-    mix-blend-mode: difference;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 10000;
     border: none;
     height: 10px;
