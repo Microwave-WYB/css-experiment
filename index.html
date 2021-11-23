@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Experiment</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
+    <meta charset="utf-8">
+    <title>CSS Experiments</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgb(204, 204, 204);
+        background-color: black;
+      }
 
+      .container {
+        max-width: 960px;
+        width: 80%;
+        background-color: rgb(49, 49, 49);
+        margin: 0 auto;
+        padding: 50px;
+        border:rgb(119, 119, 119) solid 1px;
+        border-radius: 12px;
+      }
+
+      iframe {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border: 0;
+        width: 80%;
+        height: 500px;
+        border-radius: 8px;
+        margin: 30px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+    </style>
+  </head>
   <body>
-    <div class="canvas">
-      <center><img src="imgs/win11_wallpaper.jpg" alt="win11"></center>
-    </div>
-    <div id="cursor"></div>
-    <div class="floating-card-frame">
-      <div class="floating-card"></div>
+    <div class="container">
+      <h1>CSS Experiments</h1>
+      <h2>Floating Card</h2>
+      <p>A floating card effect inspired by iPadOS cursor effect. The javascript finds the cursor position relative to the center of the box (using jquery). Then, use this relative position to determine the percentage of the x,y translations needs to be applied to the box to make it "find" your cursor when the cursor approaches to it. Also, the relative position of the cursor can also be used to shift the box shadow around and adjust the brightness filter. </p>
+      <p>The shadow under the box is composed by 2 shadows, one normal black shadow and one blue shadow that adds the "glow" effect to the box. This is also something done by the Apple iPadOS. iPadOS also hides the cursor pointer when moving into an icon and add highlight effects to the icon according to the position of the cursor in the icon. </p>
+      <p><i>Firefox does not support backdrop blur effect</i> </p>
+      <a href="FloatingCard/index.html" class="focusable"><iframe src="FloatingCard/index.html" frameborder="0"></iframe></a> <br>
     </div>
   </body>
-
-  <script src="script.js"></script>
 </html>
