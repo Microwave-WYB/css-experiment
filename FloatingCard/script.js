@@ -37,7 +37,7 @@ $(".floating-card-frame").mousemove(function (e) {
   card.style.filter = `brightness(${brightness})`;
   card.style.backdropFilter = `blur(10px)`;
   clearTimeout(timer);
-  timer=setTimeout(mouseStopped, 1500);
+  timer=setTimeout(mouseStopped, 1000);
 });
 
 function mouseStopped(){

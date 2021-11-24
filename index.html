@@ -23,15 +23,18 @@
       }
 
       iframe {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
         border: 0;
         width: 80%;
         height: 500px;
-        border-radius: 8px;
         margin: 30px auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      a:visited {
+        color: rgb(204, 204, 204);
       }
 
     </style>
@@ -43,7 +46,8 @@
       <p>A floating card effect inspired by iPadOS cursor effect. The javascript finds the cursor position relative to the center of the box (using jquery). Then, use this relative position to determine the percentage of the x,y translations needs to be applied to the box to make it "find" your cursor when the cursor approaches to it. Also, the relative position of the cursor can also be used to shift the box shadow around and adjust the brightness filter. </p>
       <p>The shadow under the box is composed by 2 shadows, one normal black shadow and one blue shadow that adds the "glow" effect to the box. This is also something done by the Apple iPadOS. iPadOS also hides the cursor pointer when moving into an icon and add highlight effects to the icon according to the position of the cursor in the icon. </p>
       <p><i>Firefox does not support backdrop blur effect</i> </p>
-      <a href="FloatingCard/index.html" class="focusable"><iframe src="FloatingCard/index.html" frameborder="0"></iframe></a> <br>
+      <a href="FloatingCard/index.html" class="focusable">View Demo</a> <br>
+      <iframe src="FloatingCard/" frameborder="0"></iframe>
     </div>
   </body>
 </html>
